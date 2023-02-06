@@ -287,6 +287,9 @@ main {
         @media screen and (max-width:1024px) {
             padding: 2.5rem 3.75rem;
         }
+        @media screen and (max-width:768px) {
+            padding: 40px 30px;
+        }
         @media screen and (max-width:575px) {
             padding: .625rem .9375rem;
         }
@@ -335,9 +338,12 @@ main {
                         height: 3.75rem;  
                     } 
                     @media screen and (max-width:768px) {
-                        width: 10.625rem;
+                        width: 170px;
                         height: 4.5rem;
                     } 
+                    @media screen and (max-width:400px) {
+                        width: 150px;
+                    }
                     @media screen and (max-width:376px) {
                         width: 6.375rem;
                         height: 4.5rem;
@@ -722,6 +728,9 @@ main {
                     @media screen and (max-width:991px) {
                         padding-left: 5.625rem;
                     }
+                    @media screen and (max-width:768px) {
+                        width: 100%;
+                    }
                     &:not(:last-child) {
                         @media screen and (max-width:768px) {
                             margin-bottom: 1.125rem;
@@ -740,9 +749,9 @@ main {
                             line-height: 22px;
                         }
                     }
-                    .col-lg-6 {
-                        padding-right: 0;
-                    }
+                    // .col-md-6 {
+                    //     padding-right: 0;
+                    // }
                 }
                 .col:first-child {
                     position: relative;
@@ -931,6 +940,7 @@ main {
                 flex: 0 0 248px;
             }
             @media screen and (max-width:768px) {
+                flex: 0 0 238px;
                 margin-right: 2.875rem;
             }
             @media screen and (max-width:575px) {
@@ -1125,6 +1135,7 @@ main {
             }
             @media screen and (max-width:768px) {
                 margin-right: 3.125rem;
+                flex: 0 0 225px;
             }
             @media screen and (max-width:575px) {
                 width: 100%;
