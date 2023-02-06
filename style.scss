@@ -79,12 +79,13 @@ header {
                 color: $primaryColor;
                 padding: 0;
             }
-            .btn {
+            button {
                 font-size: .875rem;
                 font-weight: 600;
                 background-color: $btnColor;
                 color: #ffffff;
-                border-radius: 30px ;
+                border-radius: 30px;
+                border: none;
                 padding: .6875rem 1.25rem;
                 @media screen and (max-width:1199px) {
                     padding: 8px 12px;
@@ -99,6 +100,8 @@ header {
 }
 main {
     .services {
+        display: flex;
+        align-items: center;
         position: relative;
         padding: 6.1875rem 7.6875rem 4.9375rem 9.375rem;
         @media screen and (max-width:1024px) {
@@ -197,6 +200,9 @@ main {
                     flex-direction: column;
                 }
                 .form-check {
+                    .form-check-input {
+                        box-shadow: none !important;
+                    }
                     &:not(:last-child) {
                         margin-right: 1rem;
                         @media screen and (max-width:1199px) {
@@ -219,7 +225,7 @@ main {
                     }
                 }
             }
-            .btn {
+            button {
                 color: #ffffff;
                 background-color: $btnColor;
                 border-radius: 30px;
@@ -276,7 +282,7 @@ main {
     .partners {
         padding: 5rem 9.375rem;
         @media screen and (max-width:1199px) {
-            padding: 60px 6.25rem;
+            padding: 3.75rem 6.25rem;
         }
         @media screen and (max-width:1024px) {
             padding: 2.5rem 3.75rem;
@@ -288,6 +294,7 @@ main {
             padding: 0 .8125rem 0 1.1875rem;
         } 
         p {
+            text-align: center;
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 4.25rem;
@@ -306,28 +313,36 @@ main {
                 margin-bottom: 0;
             }
         }
-        .partner-listing{
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             &:not(:last-child) {
                 margin-bottom: 1rem;
-            } 
-            svg {
-                @media screen and (max-width:1280px) {
-                    width: 8.125rem;
-                    height: 4.0625rem;
-                } 
-                @media screen and (max-width:991px) {
-                    width: 6.25rem;
-                    height: 3.75rem;  
-                } 
-                @media screen and (max-width:768px) {
-                    flex-wrap: wrap;
-                    width: 10.625rem;
-                    height: 4.5rem;
-                } 
-                @media screen and (max-width:376px) {
-                    width: 6.375rem;
-                    height: 4.5rem;
-                } 
+            }
+            @media screen and (max-width:768px) {
+                flex-wrap: wrap;
+            }
+            li { 
+                list-style: none;
+                svg {
+                    @media screen and (max-width:1280px) {
+                        width: 8.125rem;
+                        height: 4.0625rem;
+                    } 
+                    @media screen and (max-width:991px) {
+                        width: 6.25rem;
+                        height: 3.75rem;  
+                    } 
+                    @media screen and (max-width:768px) {
+                        width: 10.625rem;
+                        height: 4.5rem;
+                    } 
+                    @media screen and (max-width:376px) {
+                        width: 6.375rem;
+                        height: 4.5rem;
+                    } 
+                }
             }
         }
     }
@@ -419,6 +434,8 @@ main {
                     margin-bottom: 2.75rem;
                 }
                 .card-listing {
+                    display: flex;
+                    justify-content: space-between;
                     @media screen and (max-width:575px) {
                         flex-wrap: wrap;
                     }
@@ -677,12 +694,13 @@ main {
                         }
                     }                    
                 }
-                .btn {
+                button {
                     color: #ffffff;
                     background-color: $spanColor;
                     font-size: 1rem;
                     font-weight: 600;
                     border-radius: 30px;
+                    border: none;
                     padding: .75rem 1.8125rem;
                     @media screen and (max-width:376px) {
                         width: 100%;
@@ -696,6 +714,9 @@ main {
                 margin-top: 3.125rem;
             }
             .row {
+                @media screen and (max-width:768px) {
+                    flex-direction: column;
+                }
                 .col {
                     padding-left: 7rem;
                     @media screen and (max-width:991px) {
@@ -719,19 +740,13 @@ main {
                             line-height: 22px;
                         }
                     }
-                }
-                .col-lg-6 {
-                    padding-right: 0;
-                }
-            }
-            .top-row {
-                margin-bottom: 3rem;
-                @media screen and (max-width:768px) {
-                    flex-direction: column;
-                    margin-bottom: 1.125rem;
+                    .col-lg-6 {
+                        padding-right: 0;
+                    }
                 }
                 .col:first-child {
                     position: relative;
+                    margin-bottom: 1.125rem;
                     &::before {
                         position: absolute;
                         content: "";
@@ -742,8 +757,9 @@ main {
                         left: 0;
                     }
                 }
-                .col:last-child {
+                .col:nth-child(2) {
                     position: relative;
+                    margin-bottom: 1.125rem;
                     &::before {
                         position: absolute;
                         content: "";
@@ -754,12 +770,7 @@ main {
                         left: 0;
                     }
                 }
-            }
-            .bottom-row {
-                @media screen and (max-width:768px) {
-                    flex-direction: column;
-                }
-                .col:first-child {
+                .col:nth-child(3) {
                     position: relative;
                     &::before {
                         position: absolute;
@@ -783,7 +794,7 @@ main {
                         left: 0;
                     }
                 }
-            }
+            }    
         }
     }
     .decision-wrapper {
@@ -811,7 +822,9 @@ main {
             @media screen and (max-width:376px) {
                 padding: .9375rem 1.6875rem 2.0625rem;
             }
-            h5 {
+            span {
+                font-size: 40px;
+                font-weight: 700;
                 color: white;
                 margin-bottom: 2.75rem;
                 @media screen and (max-width:991px) {
@@ -897,21 +910,25 @@ main {
         @media screen and (max-width:575px) {
             flex-wrap: wrap;
             justify-content: center;
+            margin: 1.875rem 4.375rem 0;
         }
         @media screen and (max-width:376px) {
             padding-bottom: 1.5rem;
             margin: 2rem 1rem 0;
         }
         .about-us-content {
+            flex: 0 0 268px;
             margin-right: 7.5625rem;
             @media screen and (max-width:1280px) {
                 margin-right: 5.875rem;
             }
             @media screen and (max-width:1199px) {
                 margin-right: 5.625rem;
+                flex: 0 0 258px;
             }
             @media screen and (max-width:991px) {
                 margin-right: 4.125rem;
+                flex: 0 0 248px;
             }
             @media screen and (max-width:768px) {
                 margin-right: 2.875rem;
@@ -983,31 +1000,20 @@ main {
             }
         }
         .ul-wrapper {
+            flex: 1;
             display: flex;
+            justify-content: space-between;
             @media screen and (max-width:376px) {
                 display: none;
             }
             ul {
                 margin: 0;
                 padding: 0;
-                &:not(:last-child) {
-                    margin-right: 5.375rem;
-                    @media screen and (max-width:1280px) {
-                        margin-right: 4.25rem;
-                    }
-                    @media screen and (max-width:991px) {
-                        margin-right: 3.125rem;
-                    }
-                    @media screen and (max-width:768px) {
-                        margin-right: 1.625rem;
-                    }
-                }
                 li {
                     list-style: none;
                     &:first-child {
                         font-size: 1.125rem;
                         font-weight: 600;
-                        color: $primaryColor;
                         @media screen and (max-width:1199px){
                             font-size: .875rem;
                         }
@@ -1032,8 +1038,12 @@ main {
                             margin-bottom: 1.25rem;
                         }
                     }
-                }
+                    a {
+                        text-decoration: none;
+                        color: $primaryColor;
+                    }
             }
+        }
         }
     }
     .ul-mobile {
@@ -1043,6 +1053,8 @@ main {
             margin: 1.5rem 1rem;
             border-bottom: 1px solid $borderColor;
             ul {
+                display: flex;
+                flex-direction: column;
                 padding: 0;
                 li {
                     position: relative;
@@ -1090,6 +1102,7 @@ main {
         @media screen and (max-width:575px) {
             flex-wrap: wrap;
             justify-content: center;
+            margin: 30px 60px 0;
         }
         @media screen and (max-width:376px) {
             margin: 1.5rem 1rem 0;
@@ -1098,12 +1111,17 @@ main {
             padding-bottom: 1.5rem;
         }
         .reach-us {
+            flex: 0 0 255px;
             margin-right: 7.5625rem;
             @media screen and (max-width:1280px) {
                 margin-right: 5.875rem;
             }
+            @media screen and (max-width:1199px) {
+                flex: 0 0 245px;
+            }
             @media screen and (max-width:991px) {
                 margin-right: 4.375rem;
+                flex: 0 0 235px;
             }
             @media screen and (max-width:768px) {
                 margin-right: 3.125rem;
@@ -1114,7 +1132,7 @@ main {
             @media screen and (max-width:376px) {
                 margin-right: 0;
             }
-            h6 {
+            h5 {
                 margin-bottom: 1.5rem;
             }
             ul {
@@ -1144,31 +1162,21 @@ main {
             }
         }
         .ul-wrapper {
+            flex: 1;
             display: flex;
+            justify-content: space-between;
             @media screen and (max-width:376px) {
                 display: none;
             }
             ul {
                 margin: 0;
                 padding: 0;
-                &:not(:last-child) {
-                    margin-right: 5.375rem;
-                    @media screen and (max-width:1280px) {
-                        margin-right: 4.25rem;
-                    }
-                    @media screen and (max-width:991px) {
-                        margin-right: 3.125rem;
-                    }
-                    @media screen and (max-width:768px) {
-                        margin-right: 1.875rem;
-                    }
-                }
+                color: $primaryColor;
                 li {
                     list-style: none;
                     &:first-child {
                         font-size: 1.125rem;
                         font-weight: 600;
-                        color: $primaryColor;
                         @media screen and (max-width:1199px){
                             font-size: .875rem;
                         }
@@ -1189,6 +1197,10 @@ main {
                     }
                     &:not(:last-child) {
                         margin-bottom: 1.5rem;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: $primaryColor;
                     }
                     @media screen and (max-width:991px) {
                         margin-bottom: 1.25rem;
