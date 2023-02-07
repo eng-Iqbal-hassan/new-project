@@ -176,7 +176,7 @@ header .mobile-list {
   position: absolute;
   top: 0;
   left: 0;
-  height: 503vh;
+  height: 511vh;
   width: 60%;
   background-color: #F2F2FE;
   z-index: 1;
@@ -189,6 +189,9 @@ header .mobile-list li {
 }
 header .mobile-list li:not(:last-child) {
   margin-bottom: 2rem;
+}
+header .mobile-list.active {
+  display: block;
 }
 
 main .services {

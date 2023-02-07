@@ -108,7 +108,7 @@ header {
         position: absolute;
         top: 0;
         left: 0;
-        height: 503vh;
+        height: 511vh;
         width: 60%;
         background-color: $bgPrimary;
         z-index: 1;
@@ -120,6 +120,9 @@ header {
             &:not(:last-child) {
                 margin-bottom: 2rem;
             }
+        }
+        &.active {
+            display: block;
         }
     }
 }
