@@ -190,9 +190,6 @@ header .mobile-list li {
 header .mobile-list li:not(:last-child) {
   margin-bottom: 2rem;
 }
-header .mobile-list.active {
-  display: block;
-}
 
 main .services {
   display: flex;
