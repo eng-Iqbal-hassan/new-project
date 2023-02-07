@@ -95,7 +95,20 @@
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
             </li>
-            <li> <button>Book a Demo</button> </li>
+            <li> <button class="btn-primary">Book a Demo</button> </li>
+        </ul>
+        <div class="svg-wrapper" id="mobile-menu-icon" onclick='displayList()'>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.3333 8.65291H0.666667C0.298665 8.65291 0 8.35425 0 7.98625C0 7.61825 0.298665 7.31958 0.666667 7.31958H15.3333C15.7013 7.31958 16 7.61825 16 7.98625C16 8.35425 15.7013 8.65291 15.3333 8.65291Z" fill="#1F284F"/>
+                <path d="M15.3333 3.54159H0.666667C0.298665 3.54159 0 3.24292 0 2.87492C0 2.50692 0.298665 2.20825 0.666667 2.20825H15.3333C15.7013 2.20825 16 2.50692 16 2.87492C16 3.24292 15.7013 3.54159 15.3333 3.54159Z" fill="#1F284F"/>
+                <path d="M15.3333 13.7638H0.666667C0.298665 13.7638 0 13.4651 0 13.0971C0 12.7291 0.298665 12.4304 0.666667 12.4304H15.3333C15.7013 12.4304 16 12.7291 16 13.0971C16 13.4651 15.7013 13.7638 15.3333 13.7638Z" fill="#1F284F"/>
+            </svg>  
+        </div>
+        <ul class="mobile-list">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact Us</li>
+            <li>Services</li>
         </ul>
     </header>
     <main>
@@ -117,7 +130,7 @@
                         <label" for="Network Management">Network Management</label>
                     </div>
                 </div>
-                <button>Book a Demo</button>
+                <button class="btn-primary">Book a Demo</button>
             </div>
             <div class="image">
                 <img src="/assets/services.png" alt="services" />
@@ -1107,7 +1120,7 @@
                         <h4>Easy Integration</h4>
                         <p>Smooth Integrated with Microsoft Office 365</p>
                     </div>
-                    <button>Schedule a demo</button>
+                    <button class="btn-primary">Schedule a demo</button>
                 </div>
             </div>
             <div class="security">
@@ -1134,7 +1147,7 @@
         <div class="decision-wrapper">
             <div class="decision d-flex flex-column justify-content-center align-items-center">
                 <span>Need Help Making a Decision?</span>
-                <button>Book a Demo</button>
+                <button class="btn-primary">Book a Demo</button>
                 <ul class="d-flex">
                     <li>See the changes you can make by using automated features that matters to you</li>
                     <li>Learn how FirstWave technology can be customised for your business needs</li>
@@ -1356,6 +1369,15 @@
         </ul>
     </footer>
 </body>
+<script>
+    function displayList() {
+        var x = document.querySelector('.mobile-list');
+        if(x.style.display === 'none') {
+            x.style.display ='block'
+        }
+        else {x.style.display = 'none'}
+    }
+</script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"

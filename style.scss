@@ -5,28 +5,16 @@
     box-sizing: border-box;
 }
 header {
+    position: relative;
     padding: 1.25rem 9.375rem;
     @media screen and (max-width:1280px) {
         padding:1.25rem 5rem;
     }
+    @media screen and (max-width:1199px) {
+        padding: 1.25rem 3rem;
+    }
     @media screen and (max-width:991px) {
         padding: 1.25rem 1rem;
-    }
-    @media screen and (max-width:768px) {
-        position: relative;
-        &::before {
-            position: absolute;
-            content: "";
-            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.3333 8.65291H0.666667C0.298665 8.65291 0 8.35425 0 7.98625C0 7.61825 0.298665 7.31958 0.666667 7.31958H15.3333C15.7013 7.31958 16 7.61825 16 7.98625C16 8.35425 15.7013 8.65291 15.3333 8.65291Z' fill='%231F284F'/%3E%3Cpath d='M15.3333 3.54159H0.666667C0.298665 3.54159 0 3.24292 0 2.87492C0 2.50692 0.298665 2.20825 0.666667 2.20825H15.3333C15.7013 2.20825 16 2.50692 16 2.87492C16 3.24292 15.7013 3.54159 15.3333 3.54159Z' fill='%231F284F'/%3E%3Cpath d='M15.3333 13.7638H0.666667C0.298665 13.7638 0 13.4651 0 13.0971C0 12.7291 0.298665 12.4304 0.666667 12.4304H15.3333C15.7013 12.4304 16 12.7291 16 13.0971C16 13.4651 15.7013 13.7638 15.3333 13.7638Z' fill='%231F284F'/%3E%3C/svg%3E%0A");
-            height: 16px;
-            width: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 30px;
-            @media screen and (max-width:376px) {
-                left: 16px;
-            }
-        }
     }
     .logo {
         @media screen and (max-width:768px) {
@@ -47,7 +35,7 @@ header {
             }
         }
     }
-    ul {
+    .nav-bar {
         display: flex;
         align-items: center;
         padding: 0;
@@ -78,7 +66,7 @@ header {
                 color: $primaryColor;
                 padding: 0;
             }
-            button {
+            .btn-primary {
                 font-size: .875rem;
                 font-weight: 600;
                 background-color: $btnColor;
@@ -86,6 +74,9 @@ header {
                 border-radius: 30px;
                 border: none;
                 padding: .6875rem 1.25rem;
+                &:hover {
+                    background-color: rgb(163, 211, 163);
+                }
                 @media screen and (max-width:1199px) {
                     padding: 8px 12px;
                     font-size: 12px;
@@ -94,6 +85,35 @@ header {
                     padding: 6px 10px;
                 }
             }
+        }
+    }
+    .svg-wrapper {
+        display: none;
+        @media screen and (max-width:768px) {
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 16px;
+            svg {
+                height: 24px;
+                width: 24px;
+            }
+            #navLinks {
+                display: block;
+            }
+        }
+    }
+    .mobile-list {
+        position: absolute;
+        top: 50px;
+        left: 16px;
+        background-color: rgb(212, 198, 198);
+        padding-right: 30px;
+        text-align: center;
+        display: none;
+        li {
+            list-style: none;
         }
     }
 }
@@ -107,10 +127,10 @@ main {
             padding: 6.1875rem 6.25rem 4.9375rem 7.5rem;
         }
         @media screen and (max-width:991px) {
-            padding: 5rem 5rem 3.75rem;
+            padding: 5rem 4.375rem 3.75rem;
         }
         @media screen and (max-width:575px) {
-            padding: 2.5rem 2.5rem 1.875rem;
+            padding: 5rem 2.5rem 1.875rem;
         }
         @media screen and (max-width:768px) {
             flex-wrap: wrap;
@@ -224,13 +244,16 @@ main {
                     }
                 }
             }
-            button {
+            .btn-primary {
                 color: #ffffff;
                 background-color: $btnColor;
                 border-radius: 30px;
                 border: none;
                 padding: .75rem 1.9375rem;
                 margin-top: 1rem;
+                &:hover {
+                    opacity: 0.7;
+                }
                 @media screen and (max-width:376px) {
                     width:100%;
                 }
@@ -279,7 +302,7 @@ main {
         }  
     }
     .partners {
-        padding: 5rem 9.375rem;
+        padding: 5rem 8.125rem;
         @media screen and (max-width:1199px) {
             padding: 3.75rem 6.25rem;
         }
@@ -290,7 +313,7 @@ main {
             padding: 40px 30px;
         }
         @media screen and (max-width:575px) {
-            padding: .625rem .9375rem;
+            padding: .625rem .875rem;
         }
         @media screen and (max-width:376px) {
             padding: 0 .8125rem 0 1.1875rem;
@@ -340,7 +363,7 @@ main {
                         width: 170px;
                         height: 4.5rem;
                     } 
-                    @media screen and (max-width:400px) {
+                    @media screen and (max-width:420px) {
                         width: 9.375rem;
                     }
                     @media screen and (max-width:376px) {
@@ -452,6 +475,9 @@ main {
                                 margin-right: 0;
                             }
                         }
+                        @media screen and (max-width1920px) {
+                            padding:2.8125rem 2.625rem 2.625rem;
+                        }
                         @media screen and (max-width:1024px) {
                             padding: 2.375rem 2.25rem 2.25rem ;
                         }
@@ -491,6 +517,10 @@ main {
                             max-width: 17.75rem;
                             line-height: 28px;
                             margin-top: 1.5625rem;
+                            @media screen and (max-width:1920px) {
+                                font-size: 1.25rem;
+                                max-width: 28.125rem;
+                            }
                             @media screen and (max-width:1024px) {
                                 font-size: .875rem;
                                 max-width: 12.5rem;
@@ -699,7 +729,7 @@ main {
                         }
                     }                    
                 }
-                button {
+                .btn-primary {
                     color: #ffffff;
                     background-color: $spanColor;
                     font-size: 1rem;
@@ -707,6 +737,9 @@ main {
                     border-radius: 30px;
                     border: none;
                     padding: .75rem 1.8125rem;
+                    &:hover {
+                        opacity: 0.7;
+                    }
                     @media screen and (max-width:376px) {
                         width: 100%;
                     }
@@ -759,7 +792,7 @@ main {
                         height: 72px;
                         width: 72px;
                         top: 0;
-                        left: 0;
+                        left: 10px;
                     }
                 }
                 .col:nth-child(2) {
@@ -772,7 +805,7 @@ main {
                         height: 72px;
                         width: 72px;
                         top: 0;
-                        left: 0;
+                        left: 10px;
                     }
                 }
                 .col:nth-child(3) {
@@ -784,7 +817,7 @@ main {
                         height: 72px;
                         width: 72px;
                         top: 0;
-                        left: 0;
+                        left: 10px;
                     }
                 }
                 .col:last-child {
@@ -796,7 +829,7 @@ main {
                         height: 72px;
                         width: 72px;
                         top: 0;
-                        left: 0;
+                        left: 10px;
                     }
                 }
             }    
@@ -845,8 +878,12 @@ main {
                     margin-bottom: 1.5rem;
                 }
             }
-            button {
+            .btn-primary {
+                border: none;
                 padding: .75rem 2.4375rem;
+                &:hover {
+                    opacity: 0.7;
+                }
                 @media screen and (max-width:991px) {
                     padding: .5625rem 2rem;
                 }
@@ -1009,7 +1046,7 @@ main {
             flex: 1;
             display: flex;
             justify-content: space-between;
-            @media screen and (max-width:376px) {
+            @media screen and (max-width:420px) {
                 display: none;
             }
             ul {
@@ -1054,7 +1091,7 @@ main {
     }
     .mobile-listing {
         display: none;
-        @media screen and (max-width:376px) {
+        @media screen and (max-width:420px) {
             display: block;
             margin: 1.5rem 1rem;
             border-bottom: 1px solid $borderColor;
@@ -1136,9 +1173,6 @@ main {
             @media screen and (max-width:575px) {
                 width: 100%;
             }
-            @media screen and (max-width:376px) {
-                margin-right: 0;
-            }
             h5 {
                 margin-bottom: 1.5rem;
             }
@@ -1172,7 +1206,7 @@ main {
             flex: 1;
             display: flex;
             justify-content: space-between;
-            @media screen and (max-width:376px) {
+            @media screen and (max-width:420px) {
                 display: none;
             }
             ul {

@@ -44,6 +44,7 @@ span {
 }
 
 header {
+  position: relative;
   padding: 1.25rem 9.375rem;
 }
 @media screen and (max-width: 1280px) {
@@ -51,29 +52,14 @@ header {
     padding: 1.25rem 5rem;
   }
 }
+@media screen and (max-width: 1199px) {
+  header {
+    padding: 1.25rem 3rem;
+  }
+}
 @media screen and (max-width: 991px) {
   header {
     padding: 1.25rem 1rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  header {
-    position: relative;
-  }
-  header::before {
-    position: absolute;
-    content: "";
-    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.3333 8.65291H0.666667C0.298665 8.65291 0 8.35425 0 7.98625C0 7.61825 0.298665 7.31958 0.666667 7.31958H15.3333C15.7013 7.31958 16 7.61825 16 7.98625C16 8.35425 15.7013 8.65291 15.3333 8.65291Z' fill='%231F284F'/%3E%3Cpath d='M15.3333 3.54159H0.666667C0.298665 3.54159 0 3.24292 0 2.87492C0 2.50692 0.298665 2.20825 0.666667 2.20825H15.3333C15.7013 2.20825 16 2.50692 16 2.87492C16 3.24292 15.7013 3.54159 15.3333 3.54159Z' fill='%231F284F'/%3E%3Cpath d='M15.3333 13.7638H0.666667C0.298665 13.7638 0 13.4651 0 13.0971C0 12.7291 0.298665 12.4304 0.666667 12.4304H15.3333C15.7013 12.4304 16 12.7291 16 13.0971C16 13.4651 15.7013 13.7638 15.3333 13.7638Z' fill='%231F284F'/%3E%3C/svg%3E%0A");
-    height: 16px;
-    width: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 30px;
-  }
-}
-@media screen and (max-width: 768px) and (max-width: 376px) {
-  header::before {
-    left: 16px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -101,50 +87,50 @@ header {
     width: 8.125rem;
   }
 }
-header ul {
+header .nav-bar {
   display: flex;
   align-items: center;
   padding: 0;
   margin: 0;
 }
 @media screen and (max-width: 768px) {
-  header ul {
+  header .nav-bar {
     display: none;
   }
 }
-header ul li {
+header .nav-bar li {
   list-style: none;
   font-size: 0.875rem;
 }
-header ul li:not(:last-child) {
+header .nav-bar li:not(:last-child) {
   margin-right: 2rem;
 }
 @media screen and (max-width: 1280) {
-  header ul li:not(:last-child) {
+  header .nav-bar li:not(:last-child) {
     margin-right: 24px;
   }
 }
 @media screen and (max-width: 1199) {
-  header ul li:not(:last-child) {
+  header .nav-bar li:not(:last-child) {
     margin-right: 20px;
     font-size: 12px;
   }
 }
 @media screen and (max-width: 1024px) {
-  header ul li:not(:last-child) {
+  header .nav-bar li:not(:last-child) {
     margin-right: 16px;
   }
 }
 @media screen and (max-width: 991px) {
-  header ul li:not(:last-child) {
+  header .nav-bar li:not(:last-child) {
     margin-right: 12px;
   }
 }
-header ul li .nav-link {
+header .nav-bar li .nav-link {
   color: #17181A;
   padding: 0;
 }
-header ul li button {
+header .nav-bar li .btn-primary {
   font-size: 0.875rem;
   font-weight: 600;
   background-color: #3CBA79;
@@ -153,16 +139,50 @@ header ul li button {
   border: none;
   padding: 0.6875rem 1.25rem;
 }
+header .nav-bar li .btn-primary:hover {
+  background-color: rgb(163, 211, 163);
+}
 @media screen and (max-width: 1199px) {
-  header ul li button {
+  header .nav-bar li .btn-primary {
     padding: 8px 12px;
     font-size: 12px;
   }
 }
 @media screen and (max-width: 1024) {
-  header ul li button {
+  header .nav-bar li .btn-primary {
     padding: 6px 10px;
   }
+}
+header .svg-wrapper {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  header .svg-wrapper {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 16px;
+  }
+  header .svg-wrapper svg {
+    height: 24px;
+    width: 24px;
+  }
+  header .svg-wrapper #navLinks {
+    display: block;
+  }
+}
+header .mobile-list {
+  position: absolute;
+  top: 50px;
+  left: 16px;
+  background-color: rgb(212, 198, 198);
+  padding-right: 30px;
+  text-align: center;
+  display: none;
+}
+header .mobile-list li {
+  list-style: none;
 }
 
 main .services {
@@ -178,12 +198,12 @@ main .services {
 }
 @media screen and (max-width: 991px) {
   main .services {
-    padding: 5rem 5rem 3.75rem;
+    padding: 5rem 4.375rem 3.75rem;
   }
 }
 @media screen and (max-width: 575px) {
   main .services {
-    padding: 2.5rem 2.5rem 1.875rem;
+    padding: 5rem 2.5rem 1.875rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -329,7 +349,7 @@ main .services .services-content .form-check-group .form-check:not(:last-child) 
     font-size: 1rem;
   }
 }
-main .services .services-content button {
+main .services .services-content .btn-primary {
   color: #ffffff;
   background-color: #3CBA79;
   border-radius: 30px;
@@ -337,8 +357,11 @@ main .services .services-content button {
   padding: 0.75rem 1.9375rem;
   margin-top: 1rem;
 }
+main .services .services-content .btn-primary:hover {
+  opacity: 0.7;
+}
 @media screen and (max-width: 376px) {
-  main .services .services-content button {
+  main .services .services-content .btn-primary {
     width: 100%;
   }
 }
@@ -396,7 +419,7 @@ main .services .image::before {
   }
 }
 main .partners {
-  padding: 5rem 9.375rem;
+  padding: 5rem 8.125rem;
 }
 @media screen and (max-width: 1199px) {
   main .partners {
@@ -415,7 +438,7 @@ main .partners {
 }
 @media screen and (max-width: 575px) {
   main .partners {
-    padding: 0.625rem 0.9375rem;
+    padding: 0.625rem 0.875rem;
   }
 }
 @media screen and (max-width: 376px) {
@@ -485,7 +508,7 @@ main .partners ul li {
     height: 4.5rem;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   main .partners ul li svg {
     width: 9.375rem;
   }
@@ -624,6 +647,11 @@ main .management .tab-content .tab-pane .card-listing .card:not(:last-child) {
     margin-right: 0;
   }
 }
+@media screen and (max-width1920px) {
+  main .management .tab-content .tab-pane .card-listing .card {
+    padding: 2.8125rem 2.625rem 2.625rem;
+  }
+}
 @media screen and (max-width: 1024px) {
   main .management .tab-content .tab-pane .card-listing .card {
     padding: 2.375rem 2.25rem 2.25rem;
@@ -677,6 +705,12 @@ main .management .tab-content .tab-pane .card-listing .card p {
   max-width: 17.75rem;
   line-height: 28px;
   margin-top: 1.5625rem;
+}
+@media screen and (max-width: 1920px) {
+  main .management .tab-content .tab-pane .card-listing .card p {
+    font-size: 1.25rem;
+    max-width: 28.125rem;
+  }
 }
 @media screen and (max-width: 1024px) {
   main .management .tab-content .tab-pane .card-listing .card p {
@@ -941,7 +975,7 @@ main .cybersecurity .platform .platform-content .integration p {
     font-size: 0.75rem;
   }
 }
-main .cybersecurity .platform .platform-content button {
+main .cybersecurity .platform .platform-content .btn-primary {
   color: #ffffff;
   background-color: rgba(0, 112, 240, 0.9019607843);
   font-size: 1rem;
@@ -950,8 +984,11 @@ main .cybersecurity .platform .platform-content button {
   border: none;
   padding: 0.75rem 1.8125rem;
 }
+main .cybersecurity .platform .platform-content .btn-primary:hover {
+  opacity: 0.7;
+}
 @media screen and (max-width: 376px) {
-  main .cybersecurity .platform .platform-content button {
+  main .cybersecurity .platform .platform-content .btn-primary {
     width: 100%;
   }
 }
@@ -1012,7 +1049,7 @@ main .cybersecurity .security .row .col:first-child::before {
   height: 72px;
   width: 72px;
   top: 0;
-  left: 0;
+  left: 10px;
 }
 main .cybersecurity .security .row .col:nth-child(2) {
   position: relative;
@@ -1025,7 +1062,7 @@ main .cybersecurity .security .row .col:nth-child(2)::before {
   height: 72px;
   width: 72px;
   top: 0;
-  left: 0;
+  left: 10px;
 }
 main .cybersecurity .security .row .col:nth-child(3) {
   position: relative;
@@ -1037,7 +1074,7 @@ main .cybersecurity .security .row .col:nth-child(3)::before {
   height: 72px;
   width: 72px;
   top: 0;
-  left: 0;
+  left: 10px;
 }
 main .cybersecurity .security .row .col:last-child {
   position: relative;
@@ -1049,7 +1086,7 @@ main .cybersecurity .security .row .col:last-child::before {
   height: 72px;
   width: 72px;
   top: 0;
-  left: 0;
+  left: 10px;
 }
 main .decision-wrapper {
   background-color: #EFF5FE;
@@ -1114,20 +1151,24 @@ main .decision-wrapper .decision span {
     margin-bottom: 1.5rem;
   }
 }
-main .decision-wrapper .decision button {
+main .decision-wrapper .decision .btn-primary {
+  border: none;
   padding: 0.75rem 2.4375rem;
   color: white;
   background-color: #3CBA79;
   border-radius: 30px;
   margin-bottom: 2.75rem;
 }
+main .decision-wrapper .decision .btn-primary:hover {
+  opacity: 0.7;
+}
 @media screen and (max-width: 991px) {
-  main .decision-wrapper .decision button {
+  main .decision-wrapper .decision .btn-primary {
     padding: 0.5625rem 2rem;
   }
 }
 @media screen and (max-width: 376px) {
-  main .decision-wrapper .decision button {
+  main .decision-wrapper .decision .btn-primary {
     padding: 0.75rem 1.5rem;
     margin-bottom: 1.5rem;
   }
@@ -1322,7 +1363,7 @@ main .about-us .about-us-overvierw {
   display: flex;
   justify-content: space-between;
 }
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 420px) {
   main .about-us .about-us-overvierw {
     display: none;
   }
@@ -1378,7 +1419,7 @@ main .about-us .about-us-overvierw ul li a {
 main .mobile-listing {
   display: none;
 }
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 420px) {
   main .mobile-listing {
     display: block;
     margin: 1.5rem 1rem;
@@ -1484,11 +1525,6 @@ main .contact-us .reach-us {
     width: 100%;
   }
 }
-@media screen and (max-width: 376px) {
-  main .contact-us .reach-us {
-    margin-right: 0;
-  }
-}
 main .contact-us .reach-us h5 {
   margin-bottom: 1.5rem;
 }
@@ -1524,7 +1560,7 @@ main .contact-us .contact-us-overview {
   display: flex;
   justify-content: space-between;
 }
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 420px) {
   main .contact-us .contact-us-overview {
     display: none;
   }
