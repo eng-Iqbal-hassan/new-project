@@ -1,5 +1,4 @@
 @import "./import";
-
 * {
     margin: 0;
     padding: 0;
@@ -305,7 +304,7 @@ main {
                 margin-bottom: 2.5rem;
             }
             @media screen and (max-width:991px) {
-                font-size: 20px;
+                font-size: 1.25rem;
                 margin-bottom: 1.875rem;
             }
             @media screen and (max-width:768px) {
@@ -316,7 +315,7 @@ main {
                 margin-bottom: 0;
             }
         }
-        ul{
+        ul {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -342,7 +341,7 @@ main {
                         height: 4.5rem;
                     } 
                     @media screen and (max-width:400px) {
-                        width: 150px;
+                        width: 9.375rem;
                     }
                     @media screen and (max-width:376px) {
                         width: 6.375rem;
@@ -749,9 +748,6 @@ main {
                             line-height: 22px;
                         }
                     }
-                    // .col-md-6 {
-                    //     padding-right: 0;
-                    // }
                 }
                 .col:first-child {
                     position: relative;
@@ -1009,7 +1005,7 @@ main {
                 }
             }
         }
-        .ul-wrapper {
+        .about-us-overvierw {
             flex: 1;
             display: flex;
             justify-content: space-between;
@@ -1056,7 +1052,7 @@ main {
         }
         }
     }
-    .ul-mobile {
+    .mobile-listing {
         display: none;
         @media screen and (max-width:376px) {
             display: block;
@@ -1172,7 +1168,7 @@ main {
                 }
             }
         }
-        .ul-wrapper {
+        .contact-us-overview {
             flex: 1;
             display: flex;
             justify-content: space-between;

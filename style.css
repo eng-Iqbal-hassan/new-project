@@ -436,7 +436,7 @@ main .partners p {
 }
 @media screen and (max-width: 991px) {
   main .partners p {
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-bottom: 1.875rem;
   }
 }
@@ -487,7 +487,7 @@ main .partners ul li {
 }
 @media screen and (max-width: 400px) {
   main .partners ul li svg {
-    width: 150px;
+    width: 9.375rem;
   }
 }
 @media screen and (max-width: 376px) {
@@ -1317,94 +1317,94 @@ main .about-us .about-us-content .social-listing .social-icons .svg-wrapper:not(
     margin: 0;
   }
 }
-main .about-us .ul-wrapper {
+main .about-us .about-us-overvierw {
   flex: 1;
   display: flex;
   justify-content: space-between;
 }
 @media screen and (max-width: 376px) {
-  main .about-us .ul-wrapper {
+  main .about-us .about-us-overvierw {
     display: none;
   }
 }
-main .about-us .ul-wrapper ul {
+main .about-us .about-us-overvierw ul {
   margin: 0;
   padding: 0;
 }
-main .about-us .ul-wrapper ul li {
+main .about-us .about-us-overvierw ul li {
   list-style: none;
 }
-main .about-us .ul-wrapper ul li:first-child {
+main .about-us .about-us-overvierw ul li:first-child {
   font-size: 1.125rem;
   font-weight: 600;
 }
 @media screen and (max-width: 1199px) {
-  main .about-us .ul-wrapper ul li:first-child {
+  main .about-us .about-us-overvierw ul li:first-child {
     font-size: 0.875rem;
   }
 }
 @media screen and (max-width: 1024px) {
-  main .about-us .ul-wrapper ul li:first-child {
+  main .about-us .about-us-overvierw ul li:first-child {
     font-size: 0.75rem;
   }
 }
 @media screen and (max-width: 991px) {
-  main .about-us .ul-wrapper ul li:first-child {
+  main .about-us .about-us-overvierw ul li:first-child {
     font-size: 0.625rem;
   }
 }
-main .about-us .ul-wrapper ul li:not(:first-child) {
+main .about-us .about-us-overvierw ul li:not(:first-child) {
   font-size: 0.875rem;
   font-weight: 500;
   color: #515458;
 }
 @media screen and (max-width: 1024px) {
-  main .about-us .ul-wrapper ul li:not(:first-child) {
+  main .about-us .about-us-overvierw ul li:not(:first-child) {
     font-size: 0.625rem;
   }
 }
-main .about-us .ul-wrapper ul li:not(:last-child) {
+main .about-us .about-us-overvierw ul li:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 @media screen and (max-width: 991px) {
-  main .about-us .ul-wrapper ul li:not(:last-child) {
+  main .about-us .about-us-overvierw ul li:not(:last-child) {
     margin-bottom: 1.25rem;
   }
 }
-main .about-us .ul-wrapper ul li a {
+main .about-us .about-us-overvierw ul li a {
   text-decoration: none;
   color: #17181A;
 }
-main .ul-mobile {
+main .mobile-listing {
   display: none;
 }
 @media screen and (max-width: 376px) {
-  main .ul-mobile {
+  main .mobile-listing {
     display: block;
     margin: 1.5rem 1rem;
     border-bottom: 1px solid #B7BFC7;
   }
-  main .ul-mobile ul {
+  main .mobile-listing ul {
     display: flex;
     flex-direction: column;
     padding: 0;
   }
-  main .ul-mobile ul li {
+  main .mobile-listing ul li {
     position: relative;
     list-style: none;
     font-size: 1.125rem;
   }
-  main .ul-mobile ul li:not(:last-child) {
+  main .mobile-listing ul li:not(:last-child) {
     margin-bottom: 1.5rem;
   }
-  main .ul-mobile ul li .nav-link {
+  main .mobile-listing ul li .nav-link {
     padding: 0;
     color: #17181A;
   }
-  main .ul-mobile ul li .nav-link::after {
+  main .mobile-listing ul li .nav-link::after {
     display: none;
   }
-  main .ul-mobile ul li .nav-link::before {
+  main .mobile-listing ul li .nav-link::before {
     position: absolute;
     content: "";
     background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_580_2457)'%3E%3Cpath d='M8 16C7.7928 16 7.59409 15.9177 7.44757 15.7712C7.30106 15.6247 7.21875 15.426 7.21875 15.2188V0.78125C7.21875 0.57405 7.30106 0.375336 7.44757 0.228823C7.59409 0.08231 7.7928 0 8 0C8.2072 0 8.40591 0.08231 8.55243 0.228823C8.69894 0.375336 8.78125 0.57405 8.78125 0.78125V15.2188C8.78125 15.426 8.69894 15.6247 8.55243 15.7712C8.40591 15.9177 8.2072 16 8 16Z' fill='%231F284F'/%3E%3Cpath d='M15.2188 8.78125H0.78125C0.57405 8.78125 0.375336 8.69894 0.228823 8.55243C0.08231 8.40591 0 8.2072 0 8C0 7.7928 0.08231 7.59409 0.228823 7.44757C0.375336 7.30106 0.57405 7.21875 0.78125 7.21875H15.2188C15.426 7.21875 15.6247 7.30106 15.7712 7.44757C15.9177 7.59409 16 7.7928 16 8C16 8.2072 15.9177 8.40591 15.7712 8.55243C15.6247 8.69894 15.426 8.78125 15.2188 8.78125Z' fill='%231F284F'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_580_2457'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
@@ -1519,62 +1519,62 @@ main .contact-us .reach-us ul li p span {
     max-width: 21.875rem;
   }
 }
-main .contact-us .ul-wrapper {
+main .contact-us .contact-us-overview {
   flex: 1;
   display: flex;
   justify-content: space-between;
 }
 @media screen and (max-width: 376px) {
-  main .contact-us .ul-wrapper {
+  main .contact-us .contact-us-overview {
     display: none;
   }
 }
-main .contact-us .ul-wrapper ul {
+main .contact-us .contact-us-overview ul {
   margin: 0;
   padding: 0;
   color: #17181A;
 }
-main .contact-us .ul-wrapper ul li {
+main .contact-us .contact-us-overview ul li {
   list-style: none;
 }
-main .contact-us .ul-wrapper ul li:first-child {
+main .contact-us .contact-us-overview ul li:first-child {
   font-size: 1.125rem;
   font-weight: 600;
 }
 @media screen and (max-width: 1199px) {
-  main .contact-us .ul-wrapper ul li:first-child {
+  main .contact-us .contact-us-overview ul li:first-child {
     font-size: 0.875rem;
   }
 }
 @media screen and (max-width: 1024px) {
-  main .contact-us .ul-wrapper ul li:first-child {
+  main .contact-us .contact-us-overview ul li:first-child {
     font-size: 0.75rem;
   }
 }
 @media screen and (max-width: 991px) {
-  main .contact-us .ul-wrapper ul li:first-child {
+  main .contact-us .contact-us-overview ul li:first-child {
     font-size: 0.625rem;
   }
 }
-main .contact-us .ul-wrapper ul li:not(:first-child) {
+main .contact-us .contact-us-overview ul li:not(:first-child) {
   font-size: 0.875rem;
   font-weight: 500;
   color: #515458;
 }
 @media screen and (max-width: 1024px) {
-  main .contact-us .ul-wrapper ul li:not(:first-child) {
+  main .contact-us .contact-us-overview ul li:not(:first-child) {
     font-size: 0.625rem;
   }
 }
-main .contact-us .ul-wrapper ul li:not(:last-child) {
+main .contact-us .contact-us-overview ul li:not(:last-child) {
   margin-bottom: 1.5rem;
 }
-main .contact-us .ul-wrapper ul li a {
+main .contact-us .contact-us-overview ul li a {
   text-decoration: none;
   color: #17181A;
 }
 @media screen and (max-width: 991px) {
-  main .contact-us .ul-wrapper ul li {
+  main .contact-us .contact-us-overview ul li {
     margin-bottom: 1.25rem;
   }
 }
