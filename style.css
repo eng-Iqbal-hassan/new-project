@@ -174,15 +174,21 @@ header .svg-wrapper {
 }
 header .mobile-list {
   position: absolute;
-  top: 50px;
-  left: 16px;
-  background-color: rgb(212, 198, 198);
-  padding-right: 30px;
+  top: 0;
+  left: 0;
+  height: 503vh;
+  width: 60%;
+  background-color: #F2F2FE;
+  z-index: 1;
   text-align: center;
   display: none;
+  padding: 12px;
 }
 header .mobile-list li {
   list-style: none;
+}
+header .mobile-list li:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
 main .services {
@@ -191,12 +197,12 @@ main .services {
   position: relative;
   padding: 6.1875rem 7.6875rem 4.9375rem 9.375rem;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1199px) {
   main .services {
     padding: 6.1875rem 6.25rem 4.9375rem 7.5rem;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1024px) {
   main .services {
     padding: 5rem 4.375rem 3.75rem;
   }
@@ -268,11 +274,12 @@ main .services .services-content {
     margin-right: 1.125rem;
   }
   main .services .services-content h1 {
-    font-size: 2rem;
+    font-size: 1.875rem;
   }
 }
 @media screen and (max-width: 768px) {
   main .services .services-content {
+    margin-right: 0;
     max-width: 100%;
   }
   main .services .services-content h1 {
@@ -352,9 +359,12 @@ main .services .services-content .form-check-group .form-check:not(:last-child) 
 main .services .services-content .btn-primary {
   color: #ffffff;
   background-color: #3CBA79;
+  font-size: 1rem;
+  font-weight: 600;
   border-radius: 30px;
   border: none;
-  padding: 0.75rem 1.9375rem;
+  padding: 0.75rem;
+  width: 10.8125rem;
   margin-top: 1rem;
 }
 main .services .services-content .btn-primary:hover {
@@ -478,6 +488,8 @@ main .partners ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: 0;
+  margin-bottom: 0;
 }
 main .partners ul:not(:last-child) {
   margin-bottom: 1rem;
@@ -637,7 +649,7 @@ main .management .tab-content .tab-pane .card-listing {
   }
 }
 main .management .tab-content .tab-pane .card-listing .card {
-  padding: 2.625rem 2.5rem 2.5rem;
+  padding: 40px;
 }
 main .management .tab-content .tab-pane .card-listing .card:not(:last-child) {
   margin-right: 1.5625rem;
@@ -705,6 +717,7 @@ main .management .tab-content .tab-pane .card-listing .card p {
   max-width: 17.75rem;
   line-height: 28px;
   margin-top: 1.5625rem;
+  margin-bottom: 0;
 }
 @media screen and (max-width: 1920px) {
   main .management .tab-content .tab-pane .card-listing .card p {
@@ -1153,7 +1166,8 @@ main .decision-wrapper .decision span {
 }
 main .decision-wrapper .decision .btn-primary {
   border: none;
-  padding: 0.75rem 2.4375rem;
+  padding: 0.75rem;
+  width: 12.5rem;
   color: white;
   background-color: #3CBA79;
   border-radius: 30px;
@@ -1174,6 +1188,7 @@ main .decision-wrapper .decision .btn-primary:hover {
   }
 }
 main .decision-wrapper .decision ul {
+  margin-bottom: 0;
   padding: 0;
 }
 @media screen and (max-width: 768px) {
@@ -1221,7 +1236,6 @@ main .decision-wrapper .decision ul li::before {
 main .about-us {
   display: flex;
   border-bottom: 1px solid #E1E8F0;
-  padding-bottom: 2.75rem;
   margin: 5.25rem 13.3125rem 0 9.375rem;
 }
 @media screen and (max-width: 1199px) {
@@ -1275,12 +1289,13 @@ main .about-us .about-us-content {
 }
 @media screen and (max-width: 768px) {
   main .about-us .about-us-content {
-    flex: 0 0 238px;
+    flex: 0 0 17px;
     margin-right: 2.875rem;
   }
 }
 @media screen and (max-width: 575px) {
   main .about-us .about-us-content {
+    flex: 0 0 238px;
     width: 100%;
     margin-right: 0;
   }
@@ -1517,12 +1532,14 @@ main .contact-us .reach-us {
 @media screen and (max-width: 768px) {
   main .contact-us .reach-us {
     margin-right: 3.125rem;
-    flex: 0 0 225px;
+    flex: 0 0 150px;
   }
 }
 @media screen and (max-width: 575px) {
   main .contact-us .reach-us {
+    flex: 225px;
     width: 100%;
+    margin-bottom: 2.75rem;
   }
 }
 main .contact-us .reach-us h5 {
@@ -1546,6 +1563,7 @@ main .contact-us .reach-us ul li p {
   font-size: 0.875rem;
   font-weight: 400;
   color: #515458;
+  margin-bottom: 0;
 }
 main .contact-us .reach-us ul li p span {
   font-weight: 700;
