@@ -88,6 +88,7 @@ header {
         }
     }
     .svg-wrapper {
+        display: none;
         @media screen and (max-width:768px) {
             display: block;
             position: absolute;
@@ -103,7 +104,7 @@ header {
             }
         }
     }
-    .mobile-list {
+    .menu-items {
         position: absolute;
         top: 0;
         left: 0;
@@ -118,6 +119,10 @@ header {
             list-style: none;
             &:not(:last-child) {
                 margin-bottom: 2rem;
+            }
+            a {
+                text-decoration: none;
+                color: $primaryColor;
             }
         }
     }
@@ -319,7 +324,7 @@ main {
             padding: 2.5rem 3.75rem;
         }
         @media screen and (max-width:768px) {
-            padding: 40px 30px;
+            padding: 2.5rem 2.8125rem;
         }
         @media screen and (max-width:575px) {
             padding: .625rem .875rem;
@@ -420,14 +425,6 @@ main {
                 font-size: 1.875rem;
             }
         }
-        h3 {
-            @media screen and (max-width:768px) {
-                font-size: 1.375rem;
-            }
-            @media screen and (max-width:376px) {
-                display: none;
-            }
-        }
         p{
             @media screen and (max-width:768px) {
                 font-size: 1rem;
@@ -460,12 +457,18 @@ main {
         }
         .tab-content {
             .tab-pane {
-                h3 {
+                span {
                     font-size: 1.5rem;
                     font-weight: 500;
                     line-height: 36px;
                     color: $primaryColor;
                     margin-bottom: 2rem;
+                    @media screen and (max-width:768px) {
+                        font-size: 1.375rem;
+                    }
+                    @media screen and (max-width:376px) {
+                        display: none;
+                    }
                 }
                 > p {
                     line-height: 32px;
@@ -698,9 +701,10 @@ main {
                         transform: translateY(-50%);
                         left: 0;
                     }
-                    h4 {
+                    h3 {
                         color: $primaryColor;
                         margin-bottom: .25rem;
+                        font-weight: 400;
                     }
                     p {
                         font-size: 1rem;
@@ -728,9 +732,10 @@ main {
                         top: 0;
                         left: 0;
                     }
-                    h4 {
+                    h3 {
                         color: $primaryColor;
                         margin-bottom: .25rem;
+                        font-weight: 400;
                         }
                     p {
                         font-size: 1rem;
@@ -964,7 +969,6 @@ main {
         }
         @media screen and (max-width:575px) {
             flex-wrap: wrap;
-            justify-content: center;
             margin: 1.875rem 4.375rem 0;
         }
         @media screen and (max-width:376px) {
@@ -978,12 +982,12 @@ main {
                 margin-right: 5.875rem;
             }
             @media screen and (max-width:1199px) {
-                margin-right: 5.625rem;
                 flex: 0 0 258px;
+                margin-right: 5.625rem;
             }
             @media screen and (max-width:991px) {
-                margin-right: 4.125rem;
                 flex: 0 0 248px;
+                margin-right: 4.125rem;
             }
             @media screen and (max-width:768px) {
                 flex: 0 0 17px;
@@ -993,6 +997,9 @@ main {
                 flex: 0 0 238px;
                 width: 100%;
                 margin-right: 0;
+            }
+            @media screen and (max-width:375px) {
+                flex: 0 0 343px;
             }
             .logo {
                 margin-bottom: 1.375rem;
@@ -1011,22 +1018,24 @@ main {
                 max-width: 16.75rem;
                 margin-bottom: .125rem;
                 @media screen and (max-width:575px) {
-                    max-width: 100%;
+                    width: 100%;
                 }
                 @media screen and (max-width:376px) {
                     display: none;
                 }
             }
-            .mobile-content {
+            .description {
                 display: none;
                 @media screen and (max-width:376px) {
                     display: block;
+                    max-width: 343px;
                     font-size: .75rem;
                     line-height: 18px;
                     margin-bottom: 1rem;
                 }
             }
             .social-listing {
+                display: flex;
                 flex-direction: column;
                 @media screen and (max-width:376px) {
                     flex-direction: row;
@@ -1103,7 +1112,7 @@ main {
         }
         }
     }
-    .mobile-listing {
+    .nav-menu {
         display: none;
         @media screen and (max-width:420px) {
             display: block;
@@ -1188,7 +1197,7 @@ main {
                 width: 100%;
                 margin-bottom: 2.75rem;
             }
-            h5 {
+            h4 {
                 margin-bottom: 1.5rem;
             }
             ul {

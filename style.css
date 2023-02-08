@@ -18,11 +18,6 @@ h3 {
 }
 
 h4 {
-  font-size: 1.25rem;
-  font-weight: 400;
-}
-
-h5 {
   font-size: 1.125rem;
   font-weight: 600;
 }
@@ -153,6 +148,9 @@ header .nav-bar li .btn-primary:hover {
     padding: 6px 10px;
   }
 }
+header .svg-wrapper {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   header .svg-wrapper {
     display: block;
@@ -169,7 +167,7 @@ header .nav-bar li .btn-primary:hover {
     display: block;
   }
 }
-header .mobile-list {
+header .menu-items {
   position: absolute;
   top: 0;
   left: 0;
@@ -181,11 +179,15 @@ header .mobile-list {
   display: none;
   padding: 12px;
 }
-header .mobile-list li {
+header .menu-items li {
   list-style: none;
 }
-header .mobile-list li:not(:last-child) {
+header .menu-items li:not(:last-child) {
   margin-bottom: 2rem;
+}
+header .menu-items li a {
+  text-decoration: none;
+  color: #17181A;
 }
 
 main .services {
@@ -440,7 +442,7 @@ main .partners {
 }
 @media screen and (max-width: 768px) {
   main .partners {
-    padding: 40px 30px;
+    padding: 2.5rem 2.8125rem;
   }
 }
 @media screen and (max-width: 575px) {
@@ -581,16 +583,6 @@ main .management h2 {
   }
 }
 @media screen and (max-width: 768px) {
-  main .management h3 {
-    font-size: 1.375rem;
-  }
-}
-@media screen and (max-width: 376px) {
-  main .management h3 {
-    display: none;
-  }
-}
-@media screen and (max-width: 768px) {
   main .management p {
     font-size: 1rem;
   }
@@ -624,12 +616,22 @@ main .management ul li .nav-link {
   border-radius: 30px;
   border: 1px solid #B7BFC7;
 }
-main .management .tab-content .tab-pane h3 {
+main .management .tab-content .tab-pane span {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 36px;
   color: #17181A;
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 768px) {
+  main .management .tab-content .tab-pane span {
+    font-size: 1.375rem;
+  }
+}
+@media screen and (max-width: 376px) {
+  main .management .tab-content .tab-pane span {
+    display: none;
+  }
 }
 main .management .tab-content .tab-pane > p {
   line-height: 32px;
@@ -937,9 +939,10 @@ main .cybersecurity .platform .platform-content .configuration::before {
   transform: translateY(-50%);
   left: 0;
 }
-main .cybersecurity .platform .platform-content .configuration h4 {
+main .cybersecurity .platform .platform-content .configuration h3 {
   color: #17181A;
   margin-bottom: 0.25rem;
+  font-weight: 400;
 }
 main .cybersecurity .platform .platform-content .configuration p {
   font-size: 1rem;
@@ -971,9 +974,10 @@ main .cybersecurity .platform .platform-content .integration::before {
   top: 0;
   left: 0;
 }
-main .cybersecurity .platform .platform-content .integration h4 {
+main .cybersecurity .platform .platform-content .integration h3 {
   color: #17181A;
   margin-bottom: 0.25rem;
+  font-weight: 400;
 }
 main .cybersecurity .platform .platform-content .integration p {
   font-size: 1rem;
@@ -1253,7 +1257,6 @@ main .about-us {
 @media screen and (max-width: 575px) {
   main .about-us {
     flex-wrap: wrap;
-    justify-content: center;
     margin: 1.875rem 4.375rem 0;
   }
 }
@@ -1274,14 +1277,14 @@ main .about-us .about-us-content {
 }
 @media screen and (max-width: 1199px) {
   main .about-us .about-us-content {
-    margin-right: 5.625rem;
     flex: 0 0 258px;
+    margin-right: 5.625rem;
   }
 }
 @media screen and (max-width: 991px) {
   main .about-us .about-us-content {
-    margin-right: 4.125rem;
     flex: 0 0 248px;
+    margin-right: 4.125rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1295,6 +1298,11 @@ main .about-us .about-us-content {
     flex: 0 0 238px;
     width: 100%;
     margin-right: 0;
+  }
+}
+@media screen and (max-width: 375px) {
+  main .about-us .about-us-content {
+    flex: 0 0 343px;
   }
 }
 main .about-us .about-us-content .logo {
@@ -1318,7 +1326,7 @@ main .about-us .about-us-content p {
 }
 @media screen and (max-width: 575px) {
   main .about-us .about-us-content p {
-    max-width: 100%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 376px) {
@@ -1326,18 +1334,20 @@ main .about-us .about-us-content p {
     display: none;
   }
 }
-main .about-us .about-us-content .mobile-content {
+main .about-us .about-us-content .description {
   display: none;
 }
 @media screen and (max-width: 376px) {
-  main .about-us .about-us-content .mobile-content {
+  main .about-us .about-us-content .description {
     display: block;
+    max-width: 343px;
     font-size: 0.75rem;
     line-height: 18px;
     margin-bottom: 1rem;
   }
 }
 main .about-us .about-us-content .social-listing {
+  display: flex;
   flex-direction: column;
 }
 @media screen and (max-width: 376px) {
@@ -1428,36 +1438,36 @@ main .about-us .about-us-overview ul li a {
   text-decoration: none;
   color: #17181A;
 }
-main .mobile-listing {
+main .nav-menu {
   display: none;
 }
 @media screen and (max-width: 420px) {
-  main .mobile-listing {
+  main .nav-menu {
     display: block;
     margin: 1.5rem 1rem;
     border-bottom: 1px solid #B7BFC7;
   }
-  main .mobile-listing ul {
+  main .nav-menu ul {
     display: flex;
     flex-direction: column;
     padding: 0;
   }
-  main .mobile-listing ul li {
+  main .nav-menu ul li {
     position: relative;
     list-style: none;
     font-size: 1.125rem;
   }
-  main .mobile-listing ul li:not(:last-child) {
+  main .nav-menu ul li:not(:last-child) {
     margin-bottom: 1.5rem;
   }
-  main .mobile-listing ul li .nav-link {
+  main .nav-menu ul li .nav-link {
     padding: 0;
     color: #17181A;
   }
-  main .mobile-listing ul li .nav-link::after {
+  main .nav-menu ul li .nav-link::after {
     display: none;
   }
-  main .mobile-listing ul li .nav-link::before {
+  main .nav-menu ul li .nav-link::before {
     position: absolute;
     content: "";
     background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_580_2457)'%3E%3Cpath d='M8 16C7.7928 16 7.59409 15.9177 7.44757 15.7712C7.30106 15.6247 7.21875 15.426 7.21875 15.2188V0.78125C7.21875 0.57405 7.30106 0.375336 7.44757 0.228823C7.59409 0.08231 7.7928 0 8 0C8.2072 0 8.40591 0.08231 8.55243 0.228823C8.69894 0.375336 8.78125 0.57405 8.78125 0.78125V15.2188C8.78125 15.426 8.69894 15.6247 8.55243 15.7712C8.40591 15.9177 8.2072 16 8 16Z' fill='%231F284F'/%3E%3Cpath d='M15.2188 8.78125H0.78125C0.57405 8.78125 0.375336 8.69894 0.228823 8.55243C0.08231 8.40591 0 8.2072 0 8C0 7.7928 0.08231 7.59409 0.228823 7.44757C0.375336 7.30106 0.57405 7.21875 0.78125 7.21875H15.2188C15.426 7.21875 15.6247 7.30106 15.7712 7.44757C15.9177 7.59409 16 7.7928 16 8C16 8.2072 15.9177 8.40591 15.7712 8.55243C15.6247 8.69894 15.426 8.78125 15.2188 8.78125Z' fill='%231F284F'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_580_2457'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
@@ -1539,7 +1549,7 @@ main .contact-us .reach-us {
     margin-bottom: 2.75rem;
   }
 }
-main .contact-us .reach-us h5 {
+main .contact-us .reach-us h4 {
   margin-bottom: 1.5rem;
 }
 main .contact-us .reach-us ul {
