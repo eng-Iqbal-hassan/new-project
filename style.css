@@ -153,9 +153,6 @@ header .nav-bar li .btn-primary:hover {
     padding: 6px 10px;
   }
 }
-header .svg-wrapper {
-  display: none;
-}
 @media screen and (max-width: 768px) {
   header .svg-wrapper {
     display: block;
@@ -1373,61 +1370,61 @@ main .about-us .about-us-content .social-listing .social-icons .svg-wrapper:not(
     margin: 0;
   }
 }
-main .about-us .about-us-overvierw {
+main .about-us .about-us-overview {
   flex: 1;
   display: flex;
   justify-content: space-between;
 }
 @media screen and (max-width: 420px) {
-  main .about-us .about-us-overvierw {
+  main .about-us .about-us-overview {
     display: none;
   }
 }
-main .about-us .about-us-overvierw ul {
+main .about-us .about-us-overview ul {
   margin: 0;
   padding: 0;
 }
-main .about-us .about-us-overvierw ul li {
+main .about-us .about-us-overview ul li {
   list-style: none;
 }
-main .about-us .about-us-overvierw ul li:first-child {
+main .about-us .about-us-overview ul li:first-child {
   font-size: 1.125rem;
   font-weight: 600;
 }
 @media screen and (max-width: 1199px) {
-  main .about-us .about-us-overvierw ul li:first-child {
+  main .about-us .about-us-overview ul li:first-child {
     font-size: 0.875rem;
   }
 }
 @media screen and (max-width: 1024px) {
-  main .about-us .about-us-overvierw ul li:first-child {
+  main .about-us .about-us-overview ul li:first-child {
     font-size: 0.75rem;
   }
 }
 @media screen and (max-width: 991px) {
-  main .about-us .about-us-overvierw ul li:first-child {
+  main .about-us .about-us-overview ul li:first-child {
     font-size: 0.625rem;
   }
 }
-main .about-us .about-us-overvierw ul li:not(:first-child) {
+main .about-us .about-us-overview ul li:not(:first-child) {
   font-size: 0.875rem;
   font-weight: 500;
   color: #515458;
 }
 @media screen and (max-width: 1024px) {
-  main .about-us .about-us-overvierw ul li:not(:first-child) {
+  main .about-us .about-us-overview ul li:not(:first-child) {
     font-size: 0.625rem;
   }
 }
-main .about-us .about-us-overvierw ul li:not(:last-child) {
+main .about-us .about-us-overview ul li:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 @media screen and (max-width: 991px) {
-  main .about-us .about-us-overvierw ul li:not(:last-child) {
+  main .about-us .about-us-overview ul li:not(:last-child) {
     margin-bottom: 1.25rem;
   }
 }
-main .about-us .about-us-overvierw ul li a {
+main .about-us .about-us-overview ul li a {
   text-decoration: none;
   color: #17181A;
 }
